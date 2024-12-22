@@ -127,9 +127,14 @@ td {
 input {
     font-family: Montserrat;
     color: #000000;
-    border: 2.5px solid #404040;
-    border-radius: 5px;
-    background-color: #bcc4ce;
+
+    border-bottom: 2.5px solid #404040;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    outline: none;
+
+    background-color: #a6bedb;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -142,7 +147,7 @@ input {
     transition-timing-function: ease;
 
     &:focus {
-        background-color: white;
+        background-color: #adc3cc;
         transform: scale(1.05);
     }
 

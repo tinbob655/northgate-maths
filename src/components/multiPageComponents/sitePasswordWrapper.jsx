@@ -66,11 +66,14 @@ export default function SitePasswordWrapper({children}) {
 
                     {/*user has not entered the password, show the the password form */}
                     <form onSubmit={(event) => {checkLoggedIn(event)}} style={formStyles} id="sitePasswordForm">
+                        <h1>
+                            Guest area
+                        </h1>
                         <p>
-                            You need a password to access this content
+                            Please enter the password below:
                         </p>
-                        <input name="password" type="password" placeholder="Enter password..." required maxLength={20} />
-                        <input name="submit" type="submit" className="submit" value="Submit" />
+                        <input name="password" type="password" placeholder="Enter password..." required maxLength={20} style={{width: '200px', height: '30px'}} />
+                        <input name="submit" type="submit" className="submit" value="Go" />
                     </form>
                 </React.Fragment>
             )}
