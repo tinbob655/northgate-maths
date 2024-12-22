@@ -124,6 +124,42 @@ td {
     }
 }
 
+input {
+    font-family: Montserrat;
+    color: #000000;
+    border: 2.5px solid #404040;
+    border-radius: 5px;
+    background-color: #bcc4ce;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-width: 100px;
+
+    transition-property: background-color transform;
+    transition-duration: 0.75s;
+    transition-timing-function: ease;
+
+    &:focus {
+        background-color: white;
+        transform: scale(1.05);
+    }
+
+    &.submit {
+        background-color: transparent;
+        border: none;
+        font-size: 22.5px;
+        color: #032836;
+        font-weight: 500;
+        max-width: 90vw;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
 .noVerticalSpacing {
     margin-top: 0;
     margin-bottom: 0;
