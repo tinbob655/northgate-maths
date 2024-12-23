@@ -34,12 +34,45 @@ h3 {
     &:hover {
         transform: scale(1.1);
     }
+
+    &.fancyButtonText {
+        color: white;
+        margin-bottom: 0;
+        transform: translateX(-20%);
+        text-shadow: 0 0 10px transparent;
+
+        transition-property: transform, text-shadow;
+
+        &.hovered {
+            transform: translateX(0);
+            text-shadow: 0 0 10px #c9d48a;
+        }
+    }
 }
 
 p {
     font-family: Montserrat;
     font-size: 20px;
     color: #000000;
+
+    &.fancyButtonArrow {
+        color: white;
+        font-size: 40px;
+        margin-top: 0;
+        padding-top: 0;
+
+        opacity: 0.0;
+        transform: translateX(-20%) rotateZ(-180deg);
+        transition-property: transform, opacity;
+        transition-duration: 0.75s;
+        transition-timing-function: ease;
+
+
+        &.hovered {
+            opacity: 1.0;
+            transform: translateX(0) rotateZ(0deg);
+        }
+    }
 }
 
 h1, h2, h3, p {
@@ -83,6 +116,7 @@ div {
         left: 0;
         z-index: 99;
         background-color: #020e307e;
+        width: 100vw;
     }
 
     &.headerLine {
@@ -101,11 +135,22 @@ div {
             transform: scale(1, 1);
         }
     }
+
+    &.fancyButtonWrapper {
+        width: '75%';
+        height: 100px;
+        border-radius: 20px;
+        border: 2px solid black;
+        box-shadow: 0 0 10px 1px black;
+        overflow: hidden;
+    }
 }
 
 table {
     width: 100%;
     table-layout: fixed;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 td {
@@ -142,7 +187,7 @@ input {
     margin-bottom: 10px;
     min-width: 100px;
 
-    transition-property: background-color transform;
+    transition-property: background-color, transform;
     transition-duration: 0.75s;
     transition-timing-function: ease;
 
