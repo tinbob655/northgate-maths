@@ -137,12 +137,22 @@ div {
     }
 
     &.fancyButtonWrapper {
-        width: '75%';
+        width: 75%;
         height: 100px;
         border-radius: 20px;
         border: 2px solid black;
         box-shadow: 0 0 10px 1px black;
         overflow: hidden;
+        opacity: 0.83;
+
+        transform: scale(1);
+        transition-property: transform;
+        transition-duration: 0.75s;
+        transition-timing-function: ease;
+
+        &.hovered {
+            transform: scale(1.04);
+        }
     }
 }
 

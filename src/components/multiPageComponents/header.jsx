@@ -48,7 +48,7 @@ export default function Header() {
     return (
         <React.Fragment>
             <div id="headerWrapper">
-                <table className="noVerticalSpacing">
+                <table>
                     <thead>
                         <tr>
                             {getHeaderCells()}
