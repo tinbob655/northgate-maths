@@ -1,6 +1,5 @@
 import React from 'react';
 import DividerLine from './dividerLine';
-import northgateImage from '../../media/northgateImageNoBackground.png';
 
 export default function PageHeader({heading, subheading}) {
 
@@ -19,7 +18,7 @@ export default function PageHeader({heading, subheading}) {
                             </p>
                         </td>
                         <td>
-                            <img className="noVerticalSpacing" style={{height: '180px', float: 'right', marginRight: '10%', marginBottom: '40px'}} src={northgateImage} alt="The Northgate High School logo" />
+                            <img className="noVerticalSpacing" style={{height: '180px', float: 'right', marginRight: '10%'}} src={'/northgateImageNoBackground.png'} alt="The Northgate High School logo" />
                         </td>
                     </tr>
                 </thead>
