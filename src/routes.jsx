@@ -3,6 +3,7 @@ import {Routes, Route} from 'react-router-dom';
 
 //import all pages
 import Home from './components/pages/home/home';
+import Papers from './components/pages/papers/papers';
 
 export default function AllRoutes() {
 
@@ -12,6 +13,7 @@ export default function AllRoutes() {
         //map of all pages
         const pages = {
             ['']: <Home />,
+            papers: <Papers/>,
         };
 
         Object.keys(pages).forEach((page) => {
