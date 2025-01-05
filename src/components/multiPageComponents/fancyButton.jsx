@@ -24,7 +24,7 @@ export default function FancyButton({backgroundColor, onClick, destination, butt
     if (destination) {
         return (
             <React.Fragment>
-                <div style={{backgroundColor: backgroundColor ? backgroundColor : 'white'}} className="fancyButtonWrapper" id={`fancyButtonWrapper${random}`} onMouseOver={() => {toggleHovered(random)}} onMouseOut={() => {toggleHovered(random)}}>
+                <div style={{backgroundColor: backgroundColor ? backgroundColor : '#3c556f'}} className="fancyButtonWrapper" id={`fancyButtonWrapper${random}`} onMouseOver={() => {toggleHovered(random)}} onMouseOut={() => {toggleHovered(random)}}>
 
                     <Link to={destination}>
 
@@ -46,7 +46,7 @@ export default function FancyButton({backgroundColor, onClick, destination, butt
     else if (onClick) {
         return (
             <React.Fragment>
-                <div style={{backgroundColor: backgroundColor ? backgroundColor : 'white'}} id={`fancyButtonWrapper${random}`} className="fancyButtonWrapper" onMouseOver={() => {toggleHovered(random)}} onMouseOut={() => {toggleHovered(random)}}>
+                <div style={{backgroundColor: backgroundColor ? backgroundColor : '#3c556f'}} id={`fancyButtonWrapper${random}`} className="fancyButtonWrapper" onMouseOver={() => {toggleHovered(random)}} onMouseOut={() => {toggleHovered(random)}}>
 
                     <button onClick={() => {onClick()}} style={{width: '100%'}}>
 
