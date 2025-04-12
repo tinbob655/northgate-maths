@@ -4,6 +4,7 @@ import {Routes, Route} from 'react-router-dom';
 //import all pages
 import Home from './components/pages/home/home';
 import Papers from './components/pages/papers/papers';
+import PastPaperPage from './components/pages/papers/pastPaperPage';
 
 export default function AllRoutes() {
 
@@ -14,6 +15,7 @@ export default function AllRoutes() {
         const pages = {
             ['']: <Home />,
             papers: <Papers/>,
+            pastPaperPage: <PastPaperPage/>,
         };
 
         Object.keys(pages).forEach((page) => {
