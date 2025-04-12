@@ -1,11 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-export default function FancyButton({backgroundColor, onClick, destination, buttonText}) {
+export default function FancyButton({backgroundColor, onClick, destination, buttonText, state}) {
 
     //button cannot be a link and a function
     if (destination && onClick) {
         throw new Error('Fancy button cannot be both a hyperlink and have a function');
+    };
+
+    //button cannot pass state if it is not a link
+    if (state && onClick) {
+        throw new Error('Fancy button cannot pass state if it is not a link');
     };
 
     const random = Math.random();
@@ -26,7 +31,7 @@ export default function FancyButton({backgroundColor, onClick, destination, butt
             <React.Fragment>
                 <div style={{backgroundColor: backgroundColor ? backgroundColor : '#3c556f'}} className="fancyButtonWrapper" id={`fancyButtonWrapper${random}`} onMouseOver={() => {toggleHovered(random)}} onMouseOut={() => {toggleHovered(random)}}>
 
-                    <Link to={destination}>
+                    <Link to={destination} state={state}>
 
                         <h3 className="fancyButtonText" id={`fancyButtonText${random}`}>
                             {buttonText}
